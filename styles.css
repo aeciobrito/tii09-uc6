@@ -16,10 +16,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    border-left: 4px solid  rgb(74, 16, 129);
+    border-left: 4px solid  rgb(114, 129, 16);
     font-size: 1.7em;
     padding-left: 10px;
-    background-color: rgb(240, 220, 253);
+    background-color: rgb(174, 171, 172);
 }
 
 h2 {
@@ -30,7 +30,7 @@ code {
     font-family: monospace;
     font-size: 1.2em;
     color: darkgreen;
-    background-color: rgb(240, 220, 253);
+    background-color: rgb(174, 171, 172);
 }
 
 hr {
@@ -70,7 +70,7 @@ hr {
    HEADER E NAVEGAÇÃO
 ============================= */
 header {
-    background-color: rgb(74, 16, 129);
+    background-color: rgb(114, 129, 16);
     width: 100%;
     margin-bottom: 30px;
 }
@@ -116,7 +116,7 @@ header {
 }
 
 .code-block-title {
-    background: rgb(74, 16, 129);
+    background: rgb(114, 129, 16);
     margin-top: 10px;
     padding: 10px;
     border-radius: inherit;
