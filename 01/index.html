@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../index.html" class="brand">UC6</a>
+                <ul class="nav-links">
+                    <li><a href="../00/index.html">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="../02/index.html">Próxima</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Conceitos Fundamentais de Algoritmos e Lógica de Programação</h1>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Objetivos da Aula</h3>
+            <p>
+                Introduzir os conceitos de algoritmos, pensamento computacional, pseudocódigo e fluxogramas, preparando
+                os alunos para a construção de soluções lógicas eficientes.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Conteúdo da Aula</h3>
+            <ol>
+                <li>
+                    <h4>O que é um Algoritmo?</h4>
+                    <ol>
+                        <li>Definição.
+                            <p>
+                                Um algoritmo é uma sequência finita e ordenada de passos para resolver um problema. Ele
+                                pode ser descrito em linguagem natural, pseudocódigo, fluxograma ou código de
+                                programação.
+                            </p>
+                        </li>
+                        <li>Exemplos de Algoritmos no Dia a Dia
+                            <ul>
+                                <li>Receita de bolo (passos para preparar um bolo).</li>
+                                <li>Rotina matinal (levantar, escovar os dentes, tomar café, sair de casa).</li>
+                                <li>Processos industriais (montagem de um carro).</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <hr>
+                <li>
+                    <h4>Pensamento Computacional</h4>
+                    <ol>
+                        <li>Definição e Componentes
+                            <ul>
+                                <li>Decomposição (dividir o problema em partes menores).</li>
+                                <li>Reconhecimento de padrões (identificar semelhanças e tendências).</li>
+                                <li>Abstração (focar no que é essencial e ignorar detalhes desnecessários).</li>
+                                <li>Algoritmos (criar uma sequência de passos para resolver um problema).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Atividade Prática</p>
+                            <p>Resolver o problema de calcular a média de um aluno.</p>
+                            <ul>
+                                <li>Decomposição: Precisamos de notas, um cálculo de média e um critério de aprovação.
+                                </li>
+                                <li>Padrões: O cálculo da média segue sempre a mesma estrutura (somar e dividir).</li>
+                                <li>Abstração: Ignorar detalhes como o tipo da prova, o nome do aluno, etc.</li>
+                                <li>Algoritmo: Criar os passos do cálculo da média (será visto em pseudocódigo na
+                                    próxima seção).</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <hr>
+                </li>
+                </li>
+                <li>
+                    <h4>Representação de Algoritmos</h4>
+                    <ol>
+                        <li>
+                            <p>Linguagem Natural</p>
+                            <p>Antes de escrever código, podemos descrever um algoritmo com palavras.
+                                Exemplo: Algoritmo para somar dois números e mostrar o resultado.</p>
+                            <ol>
+                                <li>Pedir o primeiro número.</li>
+                                <li>Pedir o segundo número.</li>
+                                <li>Somar os dois números.</li>
+                                <li>Mostrar o resultado.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>Pseudocódigo</p>
+                            <p>Pseudocódigo é uma forma estruturada de representar algoritmos usando uma linguagem
+                                próxima da humana, mas com estrutura lógica semelhante à da programação.</p>
+                            <p>Sintaxe básica de pseudocódigo:</p>
+                            <ul>
+                                <li>Entrada de dados: LER</li>
+                                <li>Processamento: CALCULAR</li>
+                                <li>Saída de dados: EXIBIR</li>
+                                <li>
+                                    <p>Exemplo:</p>
+                                    <div class="code-block">
+                                        <div class="code-block-title">Pseudocodigo</div>
+                                        <pre><code>
+INICIO
+    ESCREVER "Digite o primeiro número:"
+    LER num1
+    ESCREVER "Digite o segundo número:"
+    LER num2
+    soma ← num1 + num2
+    ESCREVER "A soma é:", soma
+FIM                                                                                                                
+                                </code></pre>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <hr>
+                </li>
+                <li>
+                    <h4>Fluxogramas</h4>
+                    <p>O que é um Fluxograma?</p>
+                    <p>Fluxogramas são representações gráficas de algoritmos, utilizando símbolos padronizados:
+                    </p>
+                    <ul>
+                        <li>Início/Fim: Oval</li>
+                        <li>Processo: Retângulo</li>
+                        <li>Decisão: Losango</li>
+                        <li>Entrada/Saída: Paralelogramo</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id=atividade>
+        <div class="container">
+            <h3>Exercício</h3>
+            <h4>Exercícios Práticos</h4>
+            <ol>
+                <li>Escreva um pseudocódigo para calcular a área de um círculo.
+                </li>
+                <li>Desenhe um fluxograma para determinar se um número é par ou ímpar.</li>
+                <li>Implemente no JavaScript um algoritmo que peça a idade do usuário e exiba se ele é maior de idade ou não.</li>
+            </ol>
+            <hr><br>
+            <p>Adicione o link da atividade <a href="atividade/atividade.html">aqui</a></p>
+        </div>
+    </section>
+</body>
+
+</html>

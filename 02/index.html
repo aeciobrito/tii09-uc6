@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 00</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../index.html" class="brand">UC6</a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="../01/index.html">Próxima</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Introdução ao Ambiente de Desenvolvimento</h1>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Objetivos da Aula</h3>
+            <p>
+                Familiarizar os alunos com as ferramentas necessárias para o desenvolvimento de algoritmos em
+                JavaScript, incluindo Visual Studio Code, entrada e saída de dados, uso do debugger, Git e GitHub.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Conteúdo da Aula</h3>
+            <ol>
+                <li>
+                    <h4>Configuração do Ambiente de Desenvolvimento</h4>
+                    <ul>
+                        <li>Baixar e instalar o Visual Studio Code, caso não tenha.</li>
+                        <li>Configurar extensões úteis para JavaScript, como:</li>
+                        <ul>
+                            <li>GitLens (para facilitar o uso do Git).</li>
+                            <li>vscode-icons</li>
+                            <li>draw io</li>
+                            <li>IntelliCode</li>
+                            <li>Live Server</li>
+                            <li>Live Preview</li>
+                            <li>Debugger for Firefox</li>
+                        </ul>
+                        <li>Ajustar configurações básicas (tema, logint do github e formatação automática).</li>
+                    </ul>
+                    <h4>Criando o Primeiro Arquivo JavaScript</h4>
+                    <ul>
+                        <li>Criar uma pasta chamada algoritmos-javascript.</li>
+                        <li>Abrir o VS Code e a pasta criada.</li>
+                        <li>Criar um arquivo aula1.html.</li>
+                        <li>Adicionar o seguinte código::
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+&ltscript>
+console.log("Olá, mundo! Este é meu primeiro código em JavaScript.");
+&lt/script>
+                                </code></pre>
+                            </div>
+                        </li>
+                        <ul>
+                            <li>Abrir o Console do Navegador (F12 > Console).</li>
+                            <li>Verificar mensagem.</li>
+                        </ul>
+                    </ul>
+                </li>
+                <hr>
+                <li>
+                    <h4>Entrada e Saída de Dados no Console e Browser</h4>
+                    <ul>
+                        <li>
+                            <h4>Saída de Dados com console.log()</h4>
+                            <ul>
+                                <li>O console.log() permite exibir mensagens e valores no console do navegador:
+                                    <div class="code-block">
+                                        <div class="code-block-title">JavaScript</div>
+                                        <pre><code>
+console.log("Este é um exemplo de saída de dados no console.");
+let numero = 10;
+console.log("O valor da variável número é:", numero);                                                                     
+                                        </code></pre>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>Entrada de Dados com prompt()</h4>
+                            <ul>
+                                <li>O prompt() permite capturar dados do usuário via navegador:
+                                    <div class="code-block">
+                                        <div class="code-block-title">JavaScript</div>
+                                        <pre><code>
+let nome = prompt("Qual é o seu nome?");
+console.log("Bem-vindo, " + nome + "!");                                                                                                                
+                                        </code></pre>
+                                    </div>
+                                </li>
+                                <li>
+                                    Importante: Sempre executar esse código direto no navegador (ou em um arquivo HTML
+                                    contendo &ltscript src="aula1.js">&lt/script> quando necessário).
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Exemplo Prático: Somando Dois Números
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let num1 = prompt("Digite o primeiro número:");
+let num2 = prompt("Digite o segundo número:");
+let soma = Number(num1) + Number(num2);
+console.log("A soma dos números é:", soma);                                                                                                        
+                                </code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            Conversão de Tipos: Como prompt() retorna uma string, usamos Number() para garantir que a
+                            soma funcione corretamente.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Uso do Debugger no VS Code</h4>
+                    <ul>
+                        <li>Debugando Código JavaScript
+                            <ol>
+                                <li>Criar um novo arquivo debug.js e adicionar o código:
+                                    <div class="code-block">
+                                        <div class="code-block-title">JavaScript</div>
+                                        <pre><code>
+let a = 5;
+let b = 10;
+let resultado = a + b;
+console.log("Resultado da soma:", resultado);                                        
+                                        </code></pre>
+                                    </div>
+                                </li>
+                                <li>No VS Code:
+                                    <ul>
+                                        <li>Colocar um breakpoint: Clique na lateral esquerda do número da linha onde
+                                            deseja
+                                            parar.</li>
+                                        <li>Abrir a aba "Run & Debug" (Ctrl + Shift + D).</li>
+                                        <li>Executar com "Start Debugging" (F5).</li>
+                                        <li>Observar valores das variáveis e fluxo de execução.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>Uso da Palavra-chave debugger
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let x = 7;
+let y = 3;
+debugger;
+let resultado = x * y;
+console.log("Resultado da multiplicação:", resultado);                                       
+                                </code></pre>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Configuração Inicial do Git</h4>
+                    <ol>
+                        <li>
+                            <p>Configurar nome e e-mail</p>
+                            <div class="code-block">
+                                <div class="code-block-title">GitBhash</div>
+                                <pre><code>
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@example.com"                                                                         
+                        </code></pre>
+                        </li>
+                        <li>
+                            <p>Criando um Repositório Git</p>
+                            <div class="code-block">
+                                <div class="code-block-title">GitBhash</div>
+                                <pre><code>
+git init
+git add .
+git commit -m "Primeiro commit - configuração do projeto"                                    
+                        </code></pre>
+                        </li>
+                        <li>
+                            <p>Publicando no GitHub</p>
+                            <div class="code-block">
+                                <div class="code-block-title">GitBhash</div>
+                                <pre><code>
+git remote add origin https://github.com/seuusuario/algoritmos-javascript.git
+git push -u origin main                                   
+                        </code></pre>
+                        </li>
+                    </ol>
+
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id=atividade>
+        <div class="container">
+            <h3>Exercício</h3>
+            <h4>X</h4>
+            <ol>
+                <li>Crie ABC.</li>
+            </ol>
+            <hr><br>
+            <p>Adicione o link da atividade <a href="atividade/atividade.html">aqui</a></p>
+        </div>
+    </section>
+</body>
+
+</html>
