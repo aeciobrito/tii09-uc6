@@ -46,9 +46,36 @@
                 <li>
                     <h4>Introdução a Variáveis e Constantes</h4>
                     <ol>
-                        <li>O que são Variáveis?</li>
-                        <li>O que são Constantes?</li>
-                        <li>Diferenças e Boas Práticas</li>
+                        <li>
+                            <p>O que são Variáveis?</p>
+                            <p>Variáveis armazenam valores que podem ser alterados durante a execução do programa. No
+                                JavaScript, usamos:</p>
+                            <ul>
+                                <li>let → permite reatribuição do valor.</li>
+                                <li>var → desatualizado, evita-se o uso.</li>
+                            </ul>
+                            <p>Exemplo:</p>
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let nome = "Ana";
+let idade = 25;                                                                                                     
+                        </code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            <p>O que são Constantes?</p>
+                            <p>Constantes armazenam valores fixos, ou seja, não podem ser alterados. No JavaScript,
+                                usamos const.</p>
+                            <p>Exemplo:</p>
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+const PI = 3.14159;
+const anoNascimento = 1995;                                                                                                     
+                        </code></pre>
+                            </div>
+                        </li>
                     </ol>
                     <hr>
                 </li>
@@ -56,15 +83,134 @@
                     <h4>Tipos de Dados no JavaScript</h4>
                     <ol>
                         <li>Principais Tipos de Dados</li>
-                        <li>Verificando o Tipo de um Dado</li>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Exemplo</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>String</td>
+                                    <td>"Olá, mundo!"</td>
+                                    <td>Texto</td>
+                                </tr>
+                                <tr>
+                                    <td>Number</td>
+                                    <td>25</td>
+                                    <td>Número</td>
+                                </tr>
+                                <tr>
+                                    <td>Boolean</td>
+                                    <td>true</td>
+                                    <td>Verdadeiro/Falso</td>
+                                </tr>
+                                <tr>
+                                    <td>Null</td>
+                                    <td>null</td>
+                                    <td>Nulo</td>
+                                </tr>
+                                <tr>
+                                    <td>Undefined</td>
+                                    <td>undefined</td>
+                                    <td>Não definido</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <li>
+                            <p>Verificando o Tipo de um Dado</p>
+                            <p>Utilizamos typeof para descobrir o tipo de uma variável.</p>
+                            <p>Exemplo:</p>
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let idade = 25;
+console.log(typeof idade); // number
+
+let nome = "Carlos";
+console.log(typeof nome); // string                                                                                                    
+                        </code></pre>
+                            </div>
+                        </li>
                     </ol>
                     <hr>
                 </li>
                 <li>
                     <h4>Operadores Aritméticos e Lógicos</h4>
                     <ol>
-                        <li>Operadores Aritméticos</li>
-                        <li>Operadores Lógicos</li>
+                        <li>
+                            <p>Operadores Aritméticos</p>
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Operador</th>
+                                        <th>Descrição</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>+</td>
+                                        <td>Soma</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>Subtração</td>
+                                    </tr>
+                                    <tr>
+                                        <td>*</td>
+                                        <td>Multiplicação</td>
+                                    </tr>
+                                    <tr>
+                                        <td>/</td>
+                                        <td>Divisão</td>
+                                    </tr>
+                                    <tr>
+                                        <td>%</td>
+                                        <td>Módulo</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>Exemplo:</p>
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let num1 = Number(prompt("Digite o primeiro número:"));
+let num2 = Number(prompt("Digite o segundo número:"));
+
+console.log("Soma:", num1 + num2);
+console.log("Diferença:", num1 - num2);
+console.log("Produto:", num1 * num2);
+console.log("Divisão:", num1 / num2);
+console.log("Resto da divisão:", num1 % num2);                                                                                                   
+                        </code></pre>
+                        </li>
+                        <li>
+                            <p>Operadores Lógicos</p>
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Operador</th>
+                                        <th>Descrição</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>&&</td>
+                                        <td>E</td>
+                                    </tr>
+                                    <tr>
+                                        <td>||</td>
+                                        <td>Ou</td>
+                                    </tr>
+                                    <tr>
+                                        <td>!</td>
+                                        <td>Não</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
                     </ol>
                     <hr>
                 </li>
@@ -73,8 +219,37 @@
                         Conversão de Tipos
                     </h4>
                     <ol>
-                        <li>Conversão Explícita</li>
+                        <li>
+                            <p>Conversão Explícita</p>
+                            <p>Convertendo um valor para número:</p>
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+let numero = Number("10"); // Converte string "10" para número 10
+let inteiro = parseInt("10.5"); // Converte string para número inteiro (10)
+let decimal = parseFloat("10.5"); // Converte string para número decimal (10.5)                                                                                                   
+                        </code></pre>
+                        </div>
+                        <p>Diferença entre Number e parseInt</p>
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+console.log(Number("10.5")); // 10.5
+console.log(parseInt("10.5")); // 10                                                                                                  
+                    </code></pre>
+                        </div>
+                        </li>
                         <li>Conversão de Dados do prompt</li>
+                        <div class="code-block">
+                            <div class="code-block-title">JavaScript</div>
+                            <pre><code>
+let idade = prompt("Digite sua idade:");
+console.log(typeof idade); // string
+
+idade = Number(idade);
+console.log(typeof idade); // number                                                                                                 
+                    </code></pre>
+                        </div>
                     </ol>
                     <hr>
                 </li>
@@ -95,12 +270,14 @@
             <ol>
                 <li>Peça ao usuário o peso (kg) e altura (m).</li>
                 <li>Calcule o IMC usando a fórmula IMC = peso / (altura * altura).</li>
-                <li>Exiba o resultado e classifique de acordo com a tabela:</li>
-                <ul>
-                    <li>IMC < 18.5 → Abaixo do peso</li>
-                    <li>18.5 ≤ IMC < 25 → Peso ideal</li>
-                    <li>IMC ≥ 25 → Acima do peso</li>
-                </ul>
+                <li>Exiba o resultado e classifique de acordo com a tabela:
+                    <ul>
+                        <li>IMC < 18.5 → Abaixo do peso</li>
+                        <li>18.5 ≤ IMC < 25 → Peso ideal</li>
+                        <li>IMC ≥ 25 → Acima do peso</li>
+                    </ul>
+                </li>
+
             </ol>
             <hr><br>
             <p>Adicione o link da atividade <a href="atividade/atividade.html">aqui</a></p>
