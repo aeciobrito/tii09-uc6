@@ -8,7 +8,12 @@
 
 ```
 INICIO
-    LER
-    ESCREVA
+    LER distancia
+    SE distancia < 50
+        ESCREVA "Frete Grátis"
+    SENAO SE distancia < 100
+        ESCREVA "R$ 10,00"
+    SENAO
+        ESCREVA "R$ 20"
 FIM
 ```
