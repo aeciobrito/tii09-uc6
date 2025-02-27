@@ -1,0 +1,23 @@
+<script>
+    let carnes = 7, arroz = 12, feijao = 8;
+
+    // while
+    while (carnes > 0 && arroz > 0 && feijao > 0) {
+        // switch case
+        let opcao = Number(prompt("Escolha a marmita: \n 1-Completa \n 2-Carnes"));
+
+        switch(opcao) {
+            case 1:
+                carnes--, arroz--, feijao--;
+                break;
+            case 2:
+                carnes -= 2;
+                break;
+            default:
+                console.log("Opção Inválida");
+        }
+    }
+
+    console.log("Fim de estoque de ingrediente!");
+
+</script>
