@@ -1,0 +1,45 @@
+<script>
+    // Criando um arry de produtos:
+    let produtos = ["Arroz", "Feijão", "Macarrão", "Açúcar"];
+
+    let clientes = ["Donald", "Mickey", "Pluto"];
+
+    // Adicionando um produto para a lista:
+    produtos.push("Café"); // Adiciona ao final
+    produtos.unshift("Sal"); // Adiciona ao início
+
+    // Adicione a Margarida na lista de clientes
+    clientes.push("Margarida");
+
+    // Remove um produto da lista:
+    produtos.pop(); // Remove do final
+
+    // Remova o Donald da lista de clientes
+    clientes.shift(); // Remove o primeiro elemento
+
+    // Percorrendo um array com for
+    for (let i = 0; i < produtos.length; i++) {
+        console.log(`Produto ${i + 1}: ${produtos[i]}`);
+    }
+
+    // Percorrendo uma lsita com forEach
+    clientes.forEach((value, index) => {
+        console.log(`Cliente ${index + 1}: ${value}`);
+    });
+
+    // Operações comuns
+    let precos = [25.50, 10.00, 40.75, 5.99];
+
+    precos.reverse();
+    precos.sort((a, b) => a - b);
+    // console.log(precos.reverse());
+
+    console.log(precos);
+
+    precosAltos = precos.filter(p => p > 15);
+    console.log(precosAltos);
+
+    clientesComM = clientes.find(nome => nome.startsWith("M"));
+    console.log(clientesComM);
+
+</script>
