@@ -32,7 +32,7 @@ function atualizarListaReservas() {
 
     reservas.forEach((reserva, n) => {
         let li = document.createElement("li");
-        li.innerHTML = `${reserva.nome}, ${reserva.data} <button onclick="removerReserva(${n})">X</button>`;
+        li.innerHTML = `${reserva.nome}, ${reserva.data} <button class="remover" onclick="removerReserva(${n})">X</button>`;
         lista.appendChild(li);
     });
 
