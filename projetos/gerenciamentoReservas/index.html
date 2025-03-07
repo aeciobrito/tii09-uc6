@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Reservas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gerenciamento de Reservas</h1>
+
+    <main>
+        <section id="formulario">
+            <input type="text" id="nome" placeholder="Nome do Cliente">
+            <input type="date" id="data">
+            <button onclick="adicionarReserva()">Adicionar Reserva</button>
+        </section>
+
+        <section id="reservas">
+            <h2>Reservas Ativas</h2>
+            <ul id="listareservas"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
