@@ -47,5 +47,41 @@
 </head>
 <body>
    <!--Implementar a página-->
+   <h1>Sistema de Funcionários</h1>
+
+   <section>
+        <h2>Cadastro</h2>
+
+        <form id="formCadastro">
+            <label>Nome:
+                <input type="text" id="nome" required>
+            </label>
+
+            <label>Matricula:
+                <input type="text" id="matricula" required>
+            </label>
+
+            <label>Ano de Admissão:
+                <input type="number" id="anoAdmissao" required>
+            </label>
+
+            <label>Endereço:
+                <input type="text" id="endereco" required>
+            </label>
+
+            <label>Tipo:
+                <select id="tipoFuncionario">
+                    <option value="gerente">Gerente</option>
+                    <option value="operador">Operador de Caixa</option>
+                    <option value="estagiario">Estagiário</option>
+                </select>
+            </label>
+
+            <button type="button" id="btnCadastrar">Cadastrar</button>
+        </form>
+        <hr>
+   </section>
+
+   <script type="module" src="script.js"></script>
 </body>
 </html>
