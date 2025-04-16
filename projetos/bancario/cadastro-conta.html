@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Conta</title>
+</head>
+<body>
+    <h1>Cadastro de Conta</h1>
+    <form id="formConta">
+        <label>Cliente: 
+            <select id="clienteId" required></select>
+        </label><br>
+        <label>Saldo Inicial: <input type="number" id="saldo" min="0" value="0"></label><br>
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="lista-contas.html">Ver Contas</a>
+
+    <script type="module">
+        import { Conta } from './Conta.js';
+        import { BancoDeDados } from './BancoDeDados.js';
+        import { Cliente } from './Cliente.js';
+        
+        // Carrega clientes no select
+        const select = document.getElementById('clienteId');
+        BancoDeDados.buscarTodosClientes().forEach(cliente => {
+            const option = document.createElement('option');
+            option.value = cliente.id;
+            option.textContent = cliente.nome;
+            select.appendChild(option);
+        });
+
+        document.getElementById('formConta').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const clienteId = document.getElementById('clienteId').value;
+            const saldo = parseFloat(document.getElementById('saldo').value);
+            
+            try {
+                const cliente = BancoDeDados.buscarClientePorId(clienteId);
+                if (!cliente) throw new Error('Cliente não encontrado');
+                
+                const conta = new Conta(cliente, saldo);
+                BancoDeDados.salvarConta(conta);
+                alert('Conta cadastrada com sucesso!');
+                window.location.href = 'lista-contas.html';
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+    </script>
+</body>
+</html>

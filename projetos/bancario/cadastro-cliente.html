@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+</head>
+<body>
+    <h1>Cadastro de Cliente</h1>
+    <form id="formCliente">
+        <label>Nome: <input type="text" id="nome" required minlength="3"></label><br>
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="lista-clientes.html">Ver Clientes</a>
+
+    <script type="module">
+        import { Conta } from './Conta.js';
+        import { BancoDeDados } from './BancoDeDados.js';
+        import { Cliente } from './Cliente.js';
+        
+        document.getElementById('formCliente').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value;
+            
+            try {
+                const cliente = new Cliente(nome);
+                BancoDeDados.salvarCliente(cliente);
+                alert('Cliente cadastrado com sucesso!');
+                window.location.href = 'lista-clientes.html';
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+    </script>
+</body>
+</html>

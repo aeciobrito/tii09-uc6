@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contas Bancárias</title>    
+</head>
+<body>
+    <h1>Contas Bancárias Cadastradas</h1>
+    <div id="listaContas"></div>
+    <a href="cadastro-conta.html" class="add-button">Nova Conta</a>
+    <a href="lista-clientes.html" style="margin-left: 10px;">Ver Clientes</a>
+
+    <script type="module">
+        import { BancoDeDados } from './BancoDeDados.js';
+        import { Conta } from './Conta.js';
+        
+        const listaContas = document.getElementById('listaContas');
+        const contas = BancoDeDados.buscarTodasContas();
+
+        if (contas.length === 0) {
+            listaContas.innerHTML = '<p>Nenhuma conta cadastrada.</p>';
+        } else {
+            contas.forEach(conta => {
+                const contaElement = document.createElement('div');
+                contaElement.className = 'conta';
+                
+                const infoElement = document.createElement('div');
+                infoElement.className = 'conta-info';
+                infoElement.innerHTML = `
+                    <h3>${conta.cliente.nome}</h3>
+                    <p>Conta: ${conta.id}</p>
+                    <p>Saldo: R$ ${conta.saldo.toFixed(2)}</p>
+                    <p>Criada em: ${conta.dataCriacao.toLocaleDateString()}</p>
+                    ${!conta.ativo ? '<p class="vencido">CONTA INATIVA</p>' : ''}
+                `;
+                
+                const actionsElement = document.createElement('div');
+                actionsElement.className = 'conta-actions';
+                actionsElement.innerHTML = `
+                    <button onclick="location.href='detalhes-conta.html?id=${conta.id}'">Detalhes</button>
+                    <button onclick="location.href='cadastro-conta.html?id=${conta.id}'">Editar</button>
+                    <button class="delete-btn" data-id="${conta.id}">Excluir</button>
+                `;
+                
+                contaElement.appendChild(infoElement);
+                contaElement.appendChild(actionsElement);
+                listaContas.appendChild(contaElement);
+            });
+
+            // Adiciona event listeners para os botões de exclusão
+            document.querySelectorAll('.delete-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (confirm('Tem certeza que deseja excluir esta conta?')) {
+                        BancoDeDados.excluirConta(this.getAttribute('data-id'));
+                        location.reload();
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <h1>Clientes Cadastrados</h1>
+    <ul id="listaClientes"></ul>
+    <a href="cadastro-cliente.html">Novo Cliente</a>
+
+    <script type="module">
+        import { BancoDeDados } from './BancoDeDados.js';
+        import { Cliente } from './Cliente.js';
+        
+        const lista = document.getElementById('listaClientes');
+        const clientes = BancoDeDados.buscarTodosClientes();
+        
+        if (clientes.length === 0) {
+            lista.innerHTML = '<li>Nenhum cliente cadastrado</li>';
+        } else {
+            clientes.forEach(cliente => {
+                const li = document.createElement('li');
+                li.textContent = cliente.toString();
+                lista.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
