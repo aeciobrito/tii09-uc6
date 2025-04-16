@@ -45,6 +45,17 @@ export class Produto {
         return maxId + 1;
     }
 
+    atualizarDados(novoNome, novoPreco, novoPeso, novaValidade) {
+        if(!novoNome || isNaN(novoPreco) || isNaN(novoPeso) || !novaValidade) {
+            throw new Error("Dados inválidos para atualização");
+        }
+
+        this.#nome = novoNome;
+        this.#preco = novoPreco;
+        this.#peso = novoPeso;
+        this.#validade = novaValidade;
+    }
+
     static fromJSON(json) {
         const produto = new Produto(json.nome, json.preco, json.peso, json.validade);
         produto.#id = json.id;
